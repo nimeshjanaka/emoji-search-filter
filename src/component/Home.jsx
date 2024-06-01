@@ -47,7 +47,7 @@ const Home = () => {
       setDisplayEmojis(filtered);
       if (lock && filtered.length > 0) {
         setSelectedEmoji(filtered[0]);
-        setDisplayEmojis([filtered[0]]); // Update to show only the selected emoji
+        setDisplayEmojis([filtered[0]]);
       }
     } else {
       setDisplayEmojis([]);
@@ -62,7 +62,7 @@ const Home = () => {
   const handleEmojiClick = (emoji) => {
     setSelectedEmoji(emoji);
     setSearchText(emoji.name);
-    setDisplayEmojis([]); // Clear other emojis to only display the selected one
+    setDisplayEmojis([]);
   };
 
   return (
@@ -76,7 +76,7 @@ const Home = () => {
     >
       <div
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1000px",
           width: "100%",
           color: "white",
           background: "#33121d",
